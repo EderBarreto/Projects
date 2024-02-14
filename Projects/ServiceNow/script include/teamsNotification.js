@@ -1,5 +1,5 @@
-var IrisMicrosoftTeams = Class.create();
-IrisMicrosoftTeams.prototype = {
+var botMicrosoftTeams = Class.create();
+botMicrosoftTeams.prototype = {
     initialize: function() {},
 
     _getGroupMembers: function(groupsID) {
@@ -264,7 +264,7 @@ IrisMicrosoftTeams.prototype = {
         }
     },
     _IRISNotificaV2: function(table, ga, recordId, targetUserId, sourceUserId, eventName, titulo, subtitulo, texto, backgroundImage, campo_url) {
-		/* var user = new GlideRecord('sys_user'); //teste inicio
+		var user = new GlideRecord('sys_user'); //teste inicio
         user.addQuery('sys_id', targetUserId);
         user.addQuery('active', false);//TESTE
         user.query();
@@ -272,7 +272,7 @@ IrisMicrosoftTeams.prototype = {
             return;
         }
 		else{
-        */
+        //teste fim
 
         if (!ga || !recordId) {
             return;
@@ -295,7 +295,6 @@ IrisMicrosoftTeams.prototype = {
 		}
     },
 
-    type: 'IrisMicrosoftTeams'
+    type: 'botMicrosoftTeams'
 };
 //To create a Custom Card, get support at https://adaptivecards.io/explorer
-    
